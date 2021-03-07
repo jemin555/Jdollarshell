@@ -8,7 +8,7 @@ J$shell supports Obfuscuation, prevents code stealing.
 J$Shell p.l  also  comes with J$shell CWE-Editor.
 J$Shell p.l is invented in Gdollar p.l.
 but J$ShellCWEEditor is invented in C#.
-
+J$Shell program also  connect  with  Wnosql(*) Securable Database
 
 SYNTAX for J$Shell 
 ==================
@@ -159,6 +159,111 @@ output
 
 output=True
 outputTree={1=[{A=[CLASS5], B=[CLASS5], C=[CLASS5], D=[CLASS5], CLASS6=[CLASS6]}], 2=[{A=[s1, s2], B=[s11, s21], C=[s12, s22]}], 3=[{s2=[read], s21=[swim], s12=[swim]}]}
+
+
+
+
+
+Example-3: Create a  employee table, list the  employee table, insert some values into employee table, update the name "shyam"  to "Sriram" using JSHELL program
+==========   ==================================================================================================================================================== 
+
+<Jshell>
+
+<USE> WDBA;
+<USE> CDollar.WDBA;
+
+<USE> CUTIL;
+
+
+<PACK> ConsoleApplication1
+{
+    <CLASS> Program
+    {
+        public void main()
+        {
+
+
+
+
+            String g = WDBASQL.WDBASQLS("datastores", "USEDATABASE", "dbpwds", "C:\\Programs\\WNOSQL\\WNOSQLProgramfiles\\WNOSQL-cod");
+
+
+            String t = WDBASQL.WDBASQLS("dbuser", "dbpwds", 1, "wilmix78", "wilmix78", 1, 5, g);
+
+            String s1 = "CREATETABLE from Employee 0 to 0 , 1 to 6 ?= X By 1 1 : {ENO,ENAME,DESIGNATION,SALARY}: {0} :{0}";
+
+          <PRINTLN>("" + WDBALIB.WDBAQUERY(s1, t));
+
+
+
+            String s11 = "SELECTRVAL from Employee 0 to 0 , 1 to 6 ?= X By 1 1 : {0} : {0} :{0}";
+
+
+            <PRINTLN>("" + WDBALIB.WDBAQUERY(s11, t));
+
+
+
+            String s12 = "INSERTINTO from Employee 4 to " + WDBALIB.WDBAQUERY(s11, t).size() + " , 1 to 6 ?= X By 1 1 : {0} : {2,jemin,sse2,300000,3,shyam,mgr,500000} : {0}";
+
+
+            <PRINTLN>("" + WDBALIB.WDBAQUERY(s12, t));
+
+
+            String s112 = "SELECTRVAL from Employee 0 to 0 , 1 to 6 ?= X By 1 1 : {0} : {0} :{0}";
+
+
+            <PRINTLN>("" + WDBALIB.WDBAQUERY(s112, t));
+
+
+
+            String s171 = "UPDATE from Employee 0 to 0 , 1 to 6 ?= C By 1 1 : {shyam} :{sriram}:{0}";
+            <PRINTLN>("" + WDBALIB.WDBAQUERY(s171, t));
+
+            
+
+
+%>
+
+?>
+
+Output
+======
+
+
+
+[ENO ENAME DESIGNATION SALARY]
+
+ Listing Table  Employee contents ...
+
+IP=1
+
+-------------
+
+
+-------------
+
+
+-------------
+
+
+-------------
+
+        [ENO |           ENAME |                 DESIGNATION |           SALARY] |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        [ENO |           ENAME |                 DESIGNATION |           SALARY |                0] |
+
+
+[ENO ENAME DESIGNATION SALARY 0][]
+
+
+[ENO, ENAME, DESIGNATION, SALARY, 0, 2, jemin, sse2, 300000, 3, shyam, mgr, 500000]
+
+Table  updated  sucessfuly 
+
+
+[ENO, ENAME, DESIGNATION, SALARY, 0, 2, jemin, sse2, 300000, 3, sriram, mgr, 500000]
+
 
 
 
