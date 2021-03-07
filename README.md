@@ -6,6 +6,8 @@ J$shell is  a programming language invented by wilmix jemin at year 2019 and it 
 
 J$shell supports Obfuscuation, prevents code stealing.
 J$Shell p.l  also  comes with J$shell CWE-Editor.
+J$Shell p.l is invented in Gdollar p.l.
+but J$ShellCWEEditor is invented in C#.
 
 
 SYNTAX for J$Shell 
