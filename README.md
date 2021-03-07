@@ -5,6 +5,7 @@
 J$shell is  a programming language invented by wilmix jemin at year 2019 and it  is used with  writ technologies.
 
 J$shell supports Obfuscuation, prevents code stealing.
+J$Shell p.l  also  comes with J$shell CWE-Editor.
 
 
 SYNTAX for J$Shell 
